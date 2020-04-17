@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Bar Load Calculator</title>
+    <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
+    <script type="text/javascript" src='./static/app.js'> </script>
+    <link href="./static/css/stylesheet.css" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Teko:500&display=swap" rel="stylesheet">
+
+    <script>
+        var input = document.getElementById("weight");
+        input.addEventListener("keyup", function(event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementById("theButton").click();
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    <div>
+        
+
+
+        <header>
+            <p>Weight on Bar:</p>
+    
+            <input type="text" id="weight" />
+            <input id="theButton" type="button" value="Submit" onclick="changeImage()"/>
+        
+        </header>
+
+        <section>
+            <div class="bar-weight">
+                <div id="loadLBS">x lbs</div>
+                <div id="loadKG">x kg</div>
+            </div>
+
+            <div class="bar-img">
+                <img class="barbell" id="barbell" src="static/img/45.png" />
+            </div>
+        </section>
+
+        <footer>
+
+
+        </footer>
+
+    </div>
+
+
+</body>
+
+</html>

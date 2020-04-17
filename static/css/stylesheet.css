@@ -1,0 +1,56 @@
+body {
+  /* font-family: 'Roboto', sans-serif; */
+  /* font-family: 'Yanone Kaffeesatz', sans-serif; */
+  font-family: 'Teko', sans-serif;
+
+  margin: 0px;
+  padding: 0px;
+  background-color: black;
+  color: white;
+  
+}
+
+
+header {
+  padding: 20px;
+}
+
+section {
+  padding: 20px;
+  width: 370px;
+  display: flex;
+  margin: 1px; 
+  /* background-color: blueviolet; */
+}
+
+footer {
+  padding: 10px 20px;
+
+}
+
+div {
+  padding: 0px;
+  margin: 0px;
+}
+
+div div {
+  padding: 20px 0px;
+}
+
+.bar-weight {
+  margin: auto;
+  font-size: xx-large;
+  /* width: 40%; */
+  /* background-color: blue; */
+}
+
+img.barbell {
+  max-height: 200px;
+  /* border: 1px solid #ffffff; */
+}
+
+
+
+.centerCell {
+  text-align: center;
+}
