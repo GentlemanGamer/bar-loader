@@ -29,7 +29,9 @@ function changeImage()
         weight = 45;
     }
 
-    $("#barbell").attr("src","static/img/" + weight + ".png");
+    document.getElementById("barbell").src = "static/img/" + weight + ".png";
+
+    // $("#barbell").attr("src","static/img/" + weight + ".png");
 
     updateWeights(weight);
 
