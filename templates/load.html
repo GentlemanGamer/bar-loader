@@ -20,14 +20,18 @@
 
     <div>
         
-
-
         <header>
             <p>Weight on Bar:</p>
-    
-            <input type="text" id="weight" />
-            <button id="theButton" type="button" value="Submit" onclick="changeImage()">Update Weight</button>
-        
+            <div>
+                <form>
+                    <input type="radio" name="units" id="units" value="lbs" checked> pounds
+                    <input type="radio" name="units" id="units" value="kg"> kilograms
+                </form>
+            </div>
+            <div>
+                <input type="text" id="weight" />
+                <button id="theButton" type="button" value="Submit" onclick="changeImage()">Update Weight</button>
+            </div>
         </header>
 
         <section>
@@ -52,8 +56,8 @@
         var input = document.getElementById("weight");
         input.addEventListener("keyup", function(event) {
             if (event.keyCode === 13) {
-            event.preventDefault();
-            document.getElementById("theButton").click();
+                event.preventDefault();
+                document.getElementById("theButton").click();
         }
         });
     </script>
