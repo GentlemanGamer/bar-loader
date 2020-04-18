@@ -21,13 +21,19 @@
     <div>
         
         <header>
-            <p>Weight on Bar:</p>
-            <div>
-                <form>
-                    <input type="radio" name="units" id="units" value="lbs" checked> pounds
-                    <input type="radio" name="units" id="units" value="kg"> kilograms
-                </form>
-            </div>
+            <h1>Weight on Bar:</h1>
+            <section class="form">
+                <div>
+                    <input type="radio" name="units" id="units-lbs" value="lbs" checked> pounds
+                </div>
+                <div>
+                    <input type="radio" name="units" id="units-kg" value="kg"> kilograms
+                    <div class="reveal-if-active">
+                        <input type="checkbox" id="kgCollars" name="kgCollars" value="collars">
+                        <label for="kgCollars">using KG collars</label>
+                    </div>
+                </div>
+            </section>
             <div>
                 <input type="text" id="weight" />
                 <button id="theButton" type="button" value="Submit" onclick="changeImage()">Update Weight</button>

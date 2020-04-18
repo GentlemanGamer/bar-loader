@@ -30,6 +30,7 @@ function changeImage()
     // var howmany = $("input[name='amt']").val();
     var weight = document.getElementById("weight").value;
     var units = document.getElementsByName("units");
+    var collars = document.getElementById("kgCollars").checked;
 
     
     for (var i = 0, length = units.length; i < length; i++) {
@@ -57,21 +58,39 @@ function changeImage()
         updateWeights(weight);
 
 
-    } else {
+    } else if (label === "kg") {
 
-        weight = round25(weight);
+        if (!collars) {
 
-        if (weight > 375) {
-            weight = 375;
+            weight = round25(weight);
+
+            if (weight > 375) {
+                weight = 375;
+            }
+
+            if (weight < 20) {
+                weight = 20;
+            }
+
+            document.getElementById("barbell").src = "static/img/kgNoCollar/" + weight + ".png";
+
+            updateWeightsKG(weight)
+
+        } else {
+
+            weight = round25(weight);
+
+            if (weight > 375) {
+                weight = 375;
+            }
+
+            if (weight < 20) {
+                weight = 20;
+            }
+
+            document.getElementById("barbell").src = "static/img/kg/" + weight + ".png";
+            updateWeightsKG(weight)
         }
-
-        if (weight < 60) {
-            weight = 60;
-        }
-
-        document.getElementById("barbell").src = "static/img/kg/" + weight + ".png";
-
-        updateWeightsKG(weight)
     }
 
     // $("#barbell").attr("src","static/img/" + weight + ".png");

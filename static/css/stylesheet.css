@@ -1,13 +1,8 @@
 body {
-  /* font-family: 'Roboto', sans-serif; */
-  /* font-family: 'Yanone Kaffeesatz', sans-serif; */
-  font-family: 'Teko', sans-serif;
-
   margin: 0px;
   padding: 0px;
   background-color: black;
   color: white;
-  
 }
 
 
@@ -21,6 +16,10 @@ section {
   display: flex;
   margin: 1px; 
   /* background-color: blueviolet; */
+}
+
+section.form div{
+  padding: 10px 20px;
 }
 
 footer {
@@ -40,6 +39,7 @@ div div {
 .bar-weight {
   margin: auto;
   font-size: xx-large;
+  font-family: 'Teko', sans-serif;
   /* width: 40%; */
   /* background-color: blue; */
 }
@@ -49,7 +49,19 @@ img.barbell {
   /* border: 1px solid #ffffff; */
 }
 
+.reveal-if-active {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
 
+input[type="radio"]:checked ~ .reveal-if-active,
+input[type="checkbox"]:checked ~ .reveal-if-active {
+    opacity: 1;
+    /* max-height: 100px; */
+    overflow: visible;
+}
 
 .centerCell {
   text-align: center;
