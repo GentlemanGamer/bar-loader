@@ -32,7 +32,7 @@ function changeImage()
     var units = document.getElementsByName("units");
     var collars = document.getElementById("kgCollars").checked;
 
-    if(!/\D/.test(weight)) {
+    if(!isNaN(weight)) {
        
         for (var i = 0, length = units.length; i < length; i++) {
             if (units[i].checked) {
@@ -42,7 +42,7 @@ function changeImage()
         }
 
         if (label === "lbs") {
-            weight = round5(weight);
+            // weight = round5(weight);
             if (weight > 855) {
                 weight = 855;
             }
@@ -50,12 +50,12 @@ function changeImage()
                 weight = 45;
             }
 
-            document.getElementById("barbell").src = "static/img/" + weight + ".png";
+            document.getElementById("barbell").src = "static/img/" + round5(weight) + ".png";
             updateWeights(weight);
 
         } else if (label === "kg") {
             if (!collars) {
-                weight = round25(weight);
+                // weight = round25(weight);
 
                 if (weight > 375) {
                     weight = 375;
@@ -64,11 +64,11 @@ function changeImage()
                     weight = 20;
                 }
 
-                document.getElementById("barbell").src = "static/img/kgNoCollar/" + weight + ".png";
+                document.getElementById("barbell").src = "static/img/kgNoCollar/" + round25(weight) + ".png";
                 updateWeightsKG(weight)
 
             } else {
-                weight = round25(weight);
+                // weight = round25(weight);
 
                 if (weight > 375) {
                     weight = 375;
@@ -78,7 +78,7 @@ function changeImage()
                     weight = 20;
                 }
 
-                document.getElementById("barbell").src = "static/img/kg/" + weight + ".png";
+                document.getElementById("barbell").src = "static/img/kg/" + round25(weight) + ".png";
                 updateWeightsKG(weight)
             }
         }
